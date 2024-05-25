@@ -1,0 +1,3 @@
+--testing loader2
+
+game.Players.staandz:Kick("2")
