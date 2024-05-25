@@ -36,6 +36,25 @@ local function getClosestPlayer(targetPosition)
 	return closestPlayer
 end
 
+local function isPositionBehindPlayer(player, targetPosition)
+	if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+		local rootPart = player.Character.HumanoidRootPart
+		local playerPosition = rootPart.Position
+		local lookVector = rootPart.CFrame.LookVector
+
+		-- Calculate direction to target position
+		local directionToTarget = (targetPosition - playerPosition).Unit
+
+		-- Calculate dot product
+		local dotProduct = lookVector:Dot(directionToTarget)
+
+		-- Check if the dot product is less than 0 (opposite side)
+		return dotProduct < 0
+	end
+
+	return false
+end
+
 -- Use the function to find the closest player
 
 
@@ -49,13 +68,16 @@ Tool.Activated:Connect(function()
 		GunModule.GunEffects(Tool, BodyEffects:FindFirstChild("Movement"), 0.5)
 
 		local offset = GunModule[Tool.Name][math.random(1, #GunModule[Tool.Name])]
-		for i = 1,20 do
+		
 			wait(0.001)
 			for i = 1, 5 do
 				local closestPlayer = getClosestPlayer(BodyEffects.MousePos.Value)
+				if isPositionBehindPlayer(closestPlayer.Character:FindFirstChild("HumanoidRootPart").Position) then
+					GunModule.CastRay(Player, Tool.Handle.CFrame * CFrame.new(Tool.Handle.ShootBBGUI.StudsOffsetWorldSpace).Position, (Tool.Handle.CFrame * CFrame.new(Tool.Handle.ShootBBGUI.StudsOffsetWorldSpace).Position + (BodyEffects.MousePos.Value - Tool.Handle.CFrame * CFrame.new(Tool.Handle.ShootBBGUI.StudsOffsetWorldSpace).Position).Unit * 5) - offset[i], 20, Tool, 74)
+				end
 				GunModule.CastRay(Player, Tool.Handle.CFrame * CFrame.new(Tool.Handle.ShootBBGUI.StudsOffsetWorldSpace).Position, (Tool.Handle.CFrame * CFrame.new(Tool.Handle.ShootBBGUI.StudsOffsetWorldSpace).Position + (closestPlayer.Character:FindFirstChild("HumanoidRootPart").Position - Tool.Handle.CFrame * CFrame.new(Tool.Handle.ShootBBGUI.StudsOffsetWorldSpace).Position).Unit * 5) - offset[i], 20, Tool, 74)
 			end
-		end
+		
 		task.wait(0.5)
 		GunFiring.Value = false
 
