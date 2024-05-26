@@ -133,4 +133,5 @@ tool2.Activated:Connect(function()
 end) 
 
 end
+asap()
 Player.CharacterAdded:Connect(asap)
