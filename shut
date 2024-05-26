@@ -5,7 +5,7 @@ local ShutdownMessage = Instance.new("Message");
 		local INSTANCE = Instance.new("IntValue", Player)
 		INSTANCE.Name = "SHUTDOWN"
 		Instance.new("ForceField",Player.Character);
-		saveData(Player)
+		
 		game:GetService("TeleportService"):Teleport(game.PlaceId,Player);
 	end 
 	game.Players.PlayerAdded:connect(function(Player)
