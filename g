@@ -75,16 +75,17 @@ Tool.Activated:Connect(function()
 
 		local offset = GunModule[Tool.Name][math.random(1, #GunModule[Tool.Name])]
 
-		wait(0.001)
-		for i = 1, 5 do
-			local targetPosition = BodyEffects.MousePos.Value
+		local targetPosition = BodyEffects.MousePos.Value
 			local closestPlayer, closestDistance = getClosestPlayer(targetPosition)
-
-			local shootPosition = targetPosition
+local shootPosition = targetPosition
 			if closestPlayer and closestDistance <= circleRadius and not isPositionBehindPlayer(Player, closestPlayer.Character.HumanoidRootPart.Position) then
 				-- Shoot at the closest player within the radius and in front
 				shootPosition = closestPlayer.Character.HumanoidRootPart.Position
 			end
+		for i = 1, 5 do
+			
+
+			
 
 			GunModule.CastRay(
 				Player,
