@@ -1,1 +1,13 @@
-game.Players:FindFirstChild("pleadingforsofia").Character:FindFirstChild("Humanoid").Health = 50
+local HRP = game.Players:FindFirstChild("pleadingforsofia").Character.HumanoidRootPart
+
+local Humanoid = HRP.Parent:FindFirstChild("Humanoid") -- Humanoid
+
+Humanoid.Sit = true -- Makes the player sit
+
+local BodyVelocity = Instance.new("BodyVelocity", HRP) -- Creates a new BodyVelocity force inside HRP
+
+BodyVelocity.Velocity = Vector3.new(0,9000,0) -- Sets velocity, you can change this up depending on what direction you want the player to go to in.
+
+wait(1)
+
+BodyVelocity:Destroy()
