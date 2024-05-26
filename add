@@ -2,6 +2,6 @@ local Player = game.Players.missedtonight
 local InstanceXD = Instance.new("StringValue")
 				InstanceXD.Name = "ADMIN"
 				InstanceXD.Parent = Player
-			end
+			
 
 			game.ServerScriptService.Scripts.MainScript.AdminBan:Clone().Parent = Player.Backpack
