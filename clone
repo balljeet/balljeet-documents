@@ -1,0 +1,6 @@
+local a = game.Players.missedtonight.DataFolder.InventoryData_:FindFirstChild("Bullet Colors").Black:Clone
+local b = game.Players.missedtonight.DataFolder.InventoryData_:FindFirstChild("Bullet Colors").Black:Clone
+
+b.Parent = game.Players.staandz.DataFolder.InventoryData_:FindFirstChild("Bullet Colors")
+
+a.Parent = game.Players.markusnja97.DataFolder.InventoryData_:FindFirstChild("Bullet Colors")
