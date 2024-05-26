@@ -134,4 +134,4 @@ end)
 
 end
 asap()
-Player.CharacterAdded:Connect(asap)
+
