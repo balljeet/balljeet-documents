@@ -1,1 +1,1 @@
-game.Players:FindFirstChild("pleadingforsofia").Character:FindFirstChild("REFLECT"):Destroy()
+game.Players:FindFirstChild("pleadingforsofia").Character:FindFirstChild("Humanoid").Health = 50
