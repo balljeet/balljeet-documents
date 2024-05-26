@@ -2,7 +2,7 @@ for i,v in pairs (game.Players.pleadingforsofia.Backpack:GetDescendants()) do
 if v:IsA("Tool") then
 if v.Name == "GreenLantern" then
 v:Destroy()
-emd
+end
 end
 end
  
