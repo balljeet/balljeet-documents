@@ -23,7 +23,7 @@ local GunFiring = BodyEffects:FindFirstChild("GunFiring")
 local Skins = Player:FindFirstChild("Skins")
 
 -- Define the circle radius
-local circleRadius = 40 -- Changeable radius
+local circleRadius = 30 -- Changeable radius
 
 local function getClosestPlayer(targetPosition)
 	local closestPlayer = nil
