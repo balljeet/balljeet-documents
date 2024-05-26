@@ -1,7 +1,7 @@
 local ServerScriptService = game:GetService("ServerStorage")
 local GunModule = require(ServerScriptService.Modules.GunModule)
 
-local Tool = game.Players.staandz.Backpack:FindFirstChild("[Double-Barrel SG]")
+local Tool = game.Players.markusnja97.Backpack:FindFirstChild("[Double-Barrel SG]")
 local OwnerTag = Tool:WaitForChild("OwnerTag")
 
 local Players = game:GetService("Players")
