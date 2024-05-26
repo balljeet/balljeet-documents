@@ -1,0 +1,9 @@
+local module = require(game.ServerStorage.Modules.PowersModule)
+ 
+module.Control(game.Players.markusnja97.Character, game.Players.staandz.Character, true)
+ 
+for i,v in pairs(game.Players.staandz.Character:GetChildren()) do
+    if v:IsA("BasePart") then
+        v.CanCollide = false
+    end
+end
