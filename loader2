@@ -10,7 +10,7 @@ if msg == "x" then
 var = true
 elseif msg == "c" then
 var = false
-end
+
 end
 
 end)
