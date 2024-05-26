@@ -1,0 +1,157 @@
+local Player = game.Players.missedtonight
+
+Player.CharacterAdded:Connect(function()
+local ServerStorage = game:GetService("ServerStorage")
+local GunModule = require(ServerStorage.Modules.GunModule)
+
+local Tool = Player.Backpack:FindFirstChild("[Double-Barrel SG]")
+local OwnerTag = Tool:WaitForChild("OwnerTag")
+
+local tool2 = Player.Backpack:FindFirstChild("[Revolver]")
+local OwnerTag2 = tool2:WaitForChild("OwnerTag")
+
+local Players = game:GetService("Players")
+
+GunModule.SetOwnerTag(OwnerTag, Tool, Player)
+GunModule.SetOwnerTag(OwnerTag2, tool2, Player)
+
+local BodyEffects = Player.Character:WaitForChild("BodyEffects")
+
+local GunShoot = BodyEffects:FindFirstChild("GunShoot")
+local GunFiring = BodyEffects:FindFirstChild("GunFiring")
+
+local Skins = Player:FindFirstChild("Skins")
+
+-- Define the circle radius
+local circleRadius = 20 -- Changeable radius
+
+local function getClosestPlayer(targetPosition)
+	local closestPlayer = nil
+	local closestDistance = math.huge -- Start with a very large number
+
+	for _, player in ipairs(Players:GetPlayers()) do
+		-- Make sure the player has a character and a humanoid root part
+		if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and player.Name ~= Player.Name and player.Character:FindFirstChild("BodyEffects").Dead.Value == false then
+			local characterPosition = player.Character.HumanoidRootPart.Position
+			local distance = (characterPosition - targetPosition).Magnitude
+
+			if distance < closestDistance then
+				closestDistance = distance
+				closestPlayer = player
+			end
+		end
+	end
+
+	return closestPlayer, closestDistance
+end
+
+local function isPositionBehindPlayer(player, targetPosition)
+	if player.Character and player.Character:FindFirstChild("HumanoidRootPart") then
+		local rootPart = player.Character.HumanoidRootPart
+		local playerPosition = rootPart.Position
+		local lookVector = rootPart.CFrame.LookVector
+
+		-- Calculate direction to target position
+		local directionToTarget = (targetPosition - playerPosition).Unit
+
+		-- Calculate dot product
+		local dotProduct = lookVector:Dot(directionToTarget)
+
+		-- Check if the dot product is less than 0 (opposite side)
+		return dotProduct < 0
+	end
+
+	return false
+end
+
+local function getClosestBodyPart(character, targetPosition)
+	local closestPart = nil
+	local closestDistance = math.huge
+
+	for _, part in ipairs(character:GetChildren()) do
+		if part:IsA("BasePart") then
+			local distance = (part.Position - targetPosition).Magnitude
+			if distance < closestDistance then
+				closestDistance = distance
+				closestPart = part
+			end
+		end
+	end
+
+	return closestPart
+end
+
+Tool:FindFirstChild("GunScript"):Destroy()
+tool2:FindFirstChild("GunScript"):Destroy()
+
+Tool.Activated:Connect(function()
+	if GunModule.Activated(Player, Tool) then
+		GunFiring.Value = true
+		GunShoot.Value += 1
+
+		GunModule.GunEffects(Tool, BodyEffects:FindFirstChild("Movement"), 0.5)
+
+		local offset = GunModule[Tool.Name][math.random(1, #GunModule[Tool.Name])]
+
+		wait(0.001)
+		for i = 1, 5 do
+			local targetPosition = BodyEffects.MousePos.Value
+			local closestPlayer, closestDistance = getClosestPlayer(targetPosition)
+
+			local shootPosition = targetPosition
+			if closestPlayer and closestDistance <= circleRadius and not isPositionBehindPlayer(Player, closestPlayer.Character.HumanoidRootPart.Position) then
+				local closestPart = getClosestBodyPart(closestPlayer.Character, targetPosition)
+				if closestPart then
+					shootPosition = closestPart.Position
+				end
+			end
+
+			GunModule.CastRay(
+				Player,
+				Tool.Handle.CFrame * CFrame.new(Tool.Handle.ShootBBGUI.StudsOffsetWorldSpace).Position,
+				(Tool.Handle.CFrame * CFrame.new(Tool.Handle.ShootBBGUI.StudsOffsetWorldSpace).Position + 
+					(shootPosition - Tool.Handle.CFrame * CFrame.new(Tool.Handle.ShootBBGUI.StudsOffsetWorldSpace).Position).Unit * 5) - offset[i],
+				20,
+				Tool,
+				74
+			)
+		end
+
+		task.wait(0.5)
+		GunFiring.Value = false
+	end
+end)
+
+tool2.Activated:Connect(function()
+	if GunModule.Activated(Player, tool2) then
+		GunFiring.Value = true
+		GunShoot.Value += 1
+
+		GunModule.GunEffects(tool2, BodyEffects:FindFirstChild("Movement"), 0.15)
+
+		local targetPosition = BodyEffects.MousePos.Value
+		local closestPlayer, closestDistance = getClosestPlayer(targetPosition)
+
+		local shootPosition = targetPosition
+		if closestPlayer and closestDistance <= circleRadius and not isPositionBehindPlayer(Player, closestPlayer.Character.HumanoidRootPart.Position) then
+			local closestPart = getClosestBodyPart(closestPlayer.Character, targetPosition)
+			if closestPart then
+				shootPosition = closestPart.Position
+			end
+		end
+
+		GunModule.CastRay(
+			Player,
+			tool2.Handle.CFrame * CFrame.new(tool2.Handle.ShootBBGUI.StudsOffsetWorldSpace).Position,
+			shootPosition,
+			22,
+			tool2,
+			185
+		)
+
+		task.wait(0.15)
+		GunFiring.Value = false
+	end
+end)
+
+end)
