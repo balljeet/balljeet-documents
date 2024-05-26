@@ -1,0 +1,21 @@
+local plr = game.Players.markusnja97
+	
+	
+	print("started")
+	local Humanoid = plr.Character:WaitForChild("Humanoid",3);
+	local HS = Humanoid.HeadScale;
+	local BDS = Humanoid.BodyDepthScale;
+	local BWS = Humanoid.BodyWidthScale;	
+	local BHS = Humanoid.BodyHeightScale;
+
+	spawn(function()
+		for i=0, 30 do
+			Humanoid.AutomaticScalingEnabled = false;
+			HS.Value += 0.1;
+			BDS.Value += 0.1;
+			BWS.Value += 0.1;
+			BHS.Value += 0.1;
+			Humanoid.AutomaticScalingEnabled = true;
+			wait();
+		end
+	end)
