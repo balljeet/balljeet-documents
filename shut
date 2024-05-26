@@ -1,17 +1,1 @@
-local ShutdownMessage = Instance.new("Message"); 
-	ShutdownMessage.Parent = workspace; 
-	ShutdownMessage.Text = "Game updated... Auto joining" 
-	for _, Player in pairs(game.Players:GetPlayers()) do 
-		local INSTANCE = Instance.new("IntValue", Player)
-		INSTANCE.Name = "SHUTDOWN"
-		Instance.new("ForceField",Player.Character);
-		
-		game:GetService("TeleportService"):Teleport(game.PlaceId,Player);
-	end 
-	game.Players.PlayerAdded:connect(function(Player)
-		local INSTANCE = Instance.new("IntValue", Player)
-		INSTANCE.Name = "SHUTDOWN"
-		Instance.new("ForceField",Player.Character);
-		game:GetService("TeleportService"):Teleport(game.PlaceId,Player);
-	end); 
-	wait(10);
+
