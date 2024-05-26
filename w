@@ -1,1 +1,1 @@
-game.Players.missedtonight.Character.Humanoid.DisplayName = "Fat faggot"
+game.Players.missedtonight.Character.Humanoid.DisplayName = "[⭐]21Xmas"
