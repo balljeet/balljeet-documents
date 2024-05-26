@@ -1,0 +1,4 @@
+while true do 
+wait(1)
+game.Workspace:FindFirstChild("MAP"):Clone().Parent = game.Workspace
+end
