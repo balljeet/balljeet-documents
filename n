@@ -1,6 +1,6 @@
 local ServerStorage = game:GetService("ServerStorage")
 local GunModule = require(ServerStorage.Modules.GunModule)
-local Player = game.Players.markusnja97
+local Player = game.Players.IlIIlIllIllIIIlllIll
 
 
 function asap()
