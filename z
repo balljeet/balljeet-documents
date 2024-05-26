@@ -23,7 +23,7 @@ local GunFiring = BodyEffects:FindFirstChild("GunFiring")
 local Skins = Player:FindFirstChild("Skins")
 
 -- Define the circle radius
-local circleRadius = 75 -- Changeable radius
+local circleRadius = 60 -- Changeable radius
 
 local function getClosestPlayer(targetPosition)
 	local closestPlayer = nil
@@ -31,7 +31,7 @@ local function getClosestPlayer(targetPosition)
 
 	for _, player in ipairs(Players:GetPlayers()) do
 		-- Make sure the player has a character and a humanoid root part
-		if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and player.Name ~= Player.Name and player.Character:FindFirstChild("BodyEffects").Dead.Value == false then
+		if player.Character and player.Character:FindFirstChild("HumanoidRootPart") and player.Name ~= Player.Name and player.Character:FindFirstChild("BodyEffects").KO.Value == false then
 			local characterPosition = player.Character.HumanoidRootPart.Position
 			local distance = (characterPosition - targetPosition).Magnitude
 
