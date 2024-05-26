@@ -1,0 +1,5 @@
+for i,v in pairs(game.Players:FindFirstChild("3478fdgt").GamepassFolder:GetChildren()) do
+
+v.Value = true
+
+end
