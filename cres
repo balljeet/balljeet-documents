@@ -1,0 +1,4 @@
+local g =  game.Players.missedtonight:FindFirstChild("DataFolder"):FindFirstChild("InventoryData"):FindFirstChild("Stomp Effects").Retired:Clone()
+
+g.Name = "CresentMoon"
+g.Parent = game.Players.missedtonight:FindFirstChild("DataFolder"):FindFirstChild("InventoryData"):FindFirstChild("Stomp Effects") 
