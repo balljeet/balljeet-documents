@@ -1,4 +1,17 @@
-local g =  game.Players.missedtonight:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects").Retired:Clone()
+local player = game.Players.ObscureDogy
 
-g.Name = "True Yggdrasil"
-g.Parent = game.Players.missedtonight:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects") 
+function genstop(stompname)
+local g =  player:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects").Car:Clone()
+
+g.Name = stompname
+g.Parent = player:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects") 
+
+end
+
+genstop("CresentMoon")
+genstop("Carti")
+genstop("Seraph")
+genstop("Made In Heaven")
+genstop("Tonka")
+genstop("True Yggdrasil")
+genstop("WhiteNova")
