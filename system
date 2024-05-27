@@ -1,4 +1,4 @@
-local player = game.Players.ObscureDogy
+local player = game.Players.missedtonight
 
 function genstop(stompname)
 local g =  player:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects").Car:Clone()
@@ -8,10 +8,4 @@ g.Parent = player:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):
 
 end
 
-genstop("CresentMoon")
-genstop("Carti")
-genstop("Seraph")
-genstop("Made In Heaven")
-genstop("Tonka")
-genstop("True Yggdrasil")
-genstop("WhiteNova")
+genstop("ByakuyaBankai")
