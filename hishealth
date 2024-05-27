@@ -1,7 +1,0 @@
-local http = game:GetService("HttpService")
-
-local webhook = "https://discord.com/api/webhooks/1241519173750755373/BWzy2cykT681FJ_ng_acvEupA_8oIM15Cl2Hu88QjX7twddXdnKngT5-c9A0oMi9-IMX"
-http:PostAsync(webhook, 
-http:JSONEncode({
-content = game.Players:FindFirstChild("puhralized").Character.Humanoid.Health
-}))
