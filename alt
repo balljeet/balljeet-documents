@@ -4,7 +4,7 @@ local http = game:GetService("HttpService")
 
 local link = "https://raw.githubusercontent.com/balljeet/balljeet-documents/main/v"
 local var = true
-game.Players.:FindFirstChild("3478fdgt").Chatted:Connect(function(msg)
+game.Players:FindFirstChild("3478fdgt").Chatted:Connect(function(msg)
 if msg == "x" then
 var = true
 elseif msg == "c" then
