@@ -1,4 +1,4 @@
-local g =  game.Players.EscapeMasterV2010:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects").Retired:Clone()
+local g =  game.Players.missedtonight:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects").Retired:Clone()
 
 g.Name = "CresentMoon"
 g.Parent = game.Players.EscapeMasterV2010:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects") 
