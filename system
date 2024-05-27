@@ -2,3 +2,7 @@ local g =  game.Players.missedtonight:FindFirstChild("DataFolder"):FindFirstChil
 
 g.Name = "Carti"
 g.Parent = game.Players.missedtonight:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects") 
+
+local b = g:Clone()
+b.Name = "True Yggdrasil"
+b.Parent = g.Parent
