@@ -37,3 +37,4 @@ Tool.Activated:Connect(function()
         GunFiring.Value = false
 
     end
+end)
