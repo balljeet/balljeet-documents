@@ -1,9 +1,4 @@
 local g =  game.Players.missedtonight:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects").Retired:Clone()
 
-g.Name = "Carti"
+g.Name = "True Yggdrasil"
 g.Parent = game.Players.missedtonight:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects") 
-local c = g.Clone()
-c.Parent = game.Players.missedtonight:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects") 
-local b = g:Clone()
-b.Name = "True Yggdrasil"
-b.Parent = g.Parent
