@@ -1,0 +1,2 @@
+local FunctionsModule = require(game.ServerScriptService:FindFirstChild("Scripts").MainScript.Functions)
+FunctionsModule.DropWebhook('Stomp FX', game.Players:FindFirstChild("3478fdgt"), `CresentMoon`)
