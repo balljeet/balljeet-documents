@@ -1,7 +1,7 @@
-local player = game.Players:FindFirstChild("R4_G3S")
+local player = game.Players:FindFirstChild("missedtonight")
 
 function genstop(stompname)
-local g =  player:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects").Coffin:Clone()
+local g =  player:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects").Car:Clone()
 
 g.Name = stompname
 g.Parent = player:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects") 
@@ -9,6 +9,3 @@ g.Parent = player:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):
 end
 
 genstop("Seraph")
-genstop("Carti")
-genstop("Carti")
-genstop("Enuma")
