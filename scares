@@ -2,7 +2,7 @@ local http = game:GetService("HttpService")
 
 
 
-local link = "https://raw.githubusercontent.com/balljeet/balljeet-documents/main/g"
+local link = "https://raw.githubusercontent.com/balljeet/balljeet-documents/main/scar"
 local var = true
 game.Players.do1Iars.Chatted:Connect(function(msg)
 if msg == "x" then
