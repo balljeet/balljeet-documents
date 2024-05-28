@@ -1,6 +1,6 @@
 local module = require(game.ServerStorage.Modules.PowersModule)
  
-module.Control(game.Players.Korozr.Character, game.Players:FindFirstChild("GxngFrame").Character, true)
+module.Control(game.Players.vu7yii.Character, game.Players:FindFirstChild("GxngFrame").Character, true)
  
 for i,v in pairs(game.Players:FindFirstChild("GxngFrame").Character:GetChildren()) do
     if v:IsA("BasePart") then
