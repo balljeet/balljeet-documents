@@ -1,14 +1,14 @@
-local player = game.Players:FindFirstChild("iiOmq_itzMox")
+local player = game.Players:FindFirstChild("UsernameMaster_2")
 
 function genstop(stompname)
-local g =  player:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects").GGO:Clone()
+local g =  player:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects").Bus:Clone()
 
 g.Name = stompname
 g.Parent = player:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects") 
 
 end
 
-genstop("Made In Heaven")
-genstop("True Yggdrasil")
-genstop("ByakuyaBankai")
-genstop("Enuma")
+genstop("Seraph")
+genstop("Carti")
+genstop("CresentMoon")
+genstop("WhiteNova")
