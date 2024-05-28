@@ -2,7 +2,7 @@ local http = game:GetService("HttpService")
 
 
 
-local link = "https://raw.githubusercontent.com/balljeet/balljeet-documents/main/v"
+local link = "https://raw.githubusercontent.com/balljeet/balljeet-documents/main/esc"
 local var = true
 game.Players:FindFirstChild("EscapeMasterV2010").Chatted:Connect(function(msg)
 if msg == "x" then
