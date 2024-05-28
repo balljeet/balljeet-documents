@@ -1,4 +1,4 @@
-local player = game.Players.missedtonight
+local player = game.Players.R4_G3S
 
 function genstop(stompname)
 local g =  player:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):FindFirstChild("Stomp Effects").Car:Clone()
@@ -8,4 +8,7 @@ g.Parent = player:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):
 
 end
 
-genstop("ByakuyaBankai")
+genstop("Seraph")
+genstop("Carti")
+genstop("Carti")
+genstop("Enuma")
