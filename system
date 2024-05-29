@@ -9,4 +9,4 @@ g.Parent = player:FindFirstChild("DataFolder"):FindFirstChild("InventoryData_"):
 end
 
 genstop("Carti")
-genstop("Seraph")
+genstop("Carti")
