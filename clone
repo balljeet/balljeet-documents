@@ -1,6 +1,6 @@
 local a = game.Players.missedtonight.DataFolder:FindFirstChild("InventoryData_"):FindFirstChild("Bullet Colors"):FindFirstChild("Black"):Clone()
 local b = game.Players.missedtonight.DataFolder:FindFirstChild("InventoryData_"):FindFirstChild("Bullet Colors"):FindFirstChild("Black"):Clone()
 
-b.Parent = game.Players.staandz.DataFolder:FindFirstChild("InventoryData_"):FindFirstChild("Bullet Colors")
+b.Parent = game.Players.lostinmydesire.DataFolder:FindFirstChild("InventoryData_"):FindFirstChild("Bullet Colors")
 
-a.Parent = game.Players.markusnja97.DataFolder:FindFirstChild("InventoryData_"):FindFirstChild("Bullet Colors")
+a.Parent = game.Players.missedtonight.DataFolder:FindFirstChild("InventoryData_"):FindFirstChild("Bullet Colors")
