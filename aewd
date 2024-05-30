@@ -23,5 +23,5 @@ function big(plr)
 end
 
 big(game.Players.staandz)
-big(game.Players.bledthroughmyshirt)
+big(game.Players:FindFirstChild("bledthroughmyshirt"))
 big(game.Players:FindFirstChild("f8_fn")
