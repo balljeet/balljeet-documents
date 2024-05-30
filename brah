@@ -49,7 +49,7 @@ end
 
 do()
 
-function do()
+function do2()
 local plr = game.Players:FindFirstChild("f8_fn")
 
 
@@ -72,3 +72,4 @@ local plr = game.Players:FindFirstChild("f8_fn")
 		end
 	end)
 end
+do2()
