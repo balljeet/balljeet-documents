@@ -1,4 +1,4 @@
-local plr = game.Players.staandz
+function big (plr)
 	
 	
 	print("started")
@@ -11,11 +11,17 @@ local plr = game.Players.staandz
 	spawn(function()
 		for i=0, 30 do
 			Humanoid.AutomaticScalingEnabled = false;
-			HS.Value += 0.1;
-			BDS.Value += 0.1;
-			BWS.Value += 0.1;
-			BHS.Value += 0.1;
+			HS.Value += 0.5;
+			BDS.Value += 0.5;
+			BWS.Value += 0.5;
+			BHS.Value += 0.5;
 			Humanoid.AutomaticScalingEnabled = true;
 			wait();
 		end
 	end)
+
+end
+
+big(game.Players.staandz)
+big(game.Players.Bledthroughmyshirt)
+big(game.Players:FindFirstChild("f8_fn")
