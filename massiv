@@ -1,4 +1,4 @@
-local plr = game.Players.staandz
+local plr = game.Players:FindFirstChild("f8_fn")
 
 
 	print("started")
