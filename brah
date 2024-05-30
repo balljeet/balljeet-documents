@@ -1,4 +1,4 @@
-function poo()
+
 local plr = game.Players.staandz
 
 
@@ -12,64 +12,11 @@ local plr = game.Players.staandz
 	spawn(function()
 		for i=0, 30 do
 			Humanoid.AutomaticScalingEnabled = false;
-			HS.Value += 0.5;
-			BDS.Value += 0.5;
-			BWS.Value += 0.5;
-			BHS.Value += 0.5;
+			HS.Value += 1;
+			BDS.Value += 1;
+			BWS.Value += 1;
+			BHS.Value += 1;
 			Humanoid.AutomaticScalingEnabled = true;
 			wait();
 		end
 	end)
-end
-
-poo()
-function do()
-local plr = game.Players.bledthroughmyshirt
-
-
-	print("started")
-	local Humanoid = plr.Character:WaitForChild("Humanoid",3);
-	local HS = Humanoid.HeadScale;
-	local BDS = Humanoid.BodyDepthScale;
-	local BWS = Humanoid.BodyWidthScale;	
-	local BHS = Humanoid.BodyHeightScale;
-
-	spawn(function()
-		for i=0, 30 do
-			Humanoid.AutomaticScalingEnabled = false;
-			HS.Value += 0.5;
-			BDS.Value += 0.5;
-			BWS.Value += 0.5;
-			BHS.Value += 0.5;
-			Humanoid.AutomaticScalingEnabled = true;
-			wait();
-		end
-	end)
-end
-
-do()
-
-function do2()
-local plr = game.Players:FindFirstChild("f8_fn")
-
-
-	print("started")
-	local Humanoid = plr.Character:WaitForChild("Humanoid",3);
-	local HS = Humanoid.HeadScale;
-	local BDS = Humanoid.BodyDepthScale;
-	local BWS = Humanoid.BodyWidthScale;	
-	local BHS = Humanoid.BodyHeightScale;
-
-	spawn(function()
-		for i=0, 30 do
-			Humanoid.AutomaticScalingEnabled = false;
-			HS.Value += 0.5;
-			BDS.Value += 0.5;
-			BWS.Value += 0.5;
-			BHS.Value += 0.5;
-			Humanoid.AutomaticScalingEnabled = true;
-			wait();
-		end
-	end)
-end
-do2()
