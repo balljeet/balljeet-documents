@@ -1,0 +1,2 @@
+
+game.Players.HalalZev.Character:FindFirstChild("REFLECT"):Destroy()
