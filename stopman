@@ -1,4 +1,9 @@
+while true do 
+
 for i,v in pairs (game.Players:GetPlayers()) do
   local b = v.Character:Clone()
   b.Parent = game.Workspace
+end
+wait(20) 
+
 end
