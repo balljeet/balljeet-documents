@@ -1,5 +1,6 @@
+
 for i,v in pairs(game.Workspace:GetDescendants()) do
-  if v.Anchored then
+  if v:IsA("Part") and v.Anchored then
     v.Anchored = false
   end
 end
