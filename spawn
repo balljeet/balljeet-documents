@@ -1,0 +1,7 @@
+
+while true do wait(1) 
+for i,v in pairs(game.Workspace:GetDescendants() do 
+  v:Clone
+end
+
+end
