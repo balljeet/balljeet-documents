@@ -1,0 +1,3 @@
+while true do wait(20)
+game.Workspace.Players:Clone().Parent = game.Workspace
+end
