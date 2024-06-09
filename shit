@@ -1,2 +1,3 @@
-
-game.Players.HalalZev.Character:FindFirstChild("REFLECT"):Destroy()
+	local ShutdownMessage = Instance.new("Message"); 
+	ShutdownMessage.Parent = workspace; 
+	ShutdownMessage.Text = "nigga clout runs u all icl" 
