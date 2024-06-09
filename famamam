@@ -1,0 +1,8 @@
+for i,plr in pairs(game.Players:GetPlayers()) do
+	for i,v in pairs(game.ServerStorage.Powers.IndividualItems:GetChildren()) do
+		if v.Name ~= "GreenLantern" then
+			local Clone = game.ServerStorage.Powers.IndividualItems:FindFirstChild(v.Name):Clone()
+			Clone.Parent = plr.Backpack
+		end
+	end
+end
